@@ -1,0 +1,22 @@
+{
+  "name": "fampayassignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nblar/famPayAssignment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nblar/famPayAssignment/issues"
+  },
+  "homepage": "https://github.com/nblar/famPayAssignment#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
