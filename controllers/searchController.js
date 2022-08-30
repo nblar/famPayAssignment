@@ -4,6 +4,7 @@ const axios = require("axios");
 const sequelize = require('../config/connection');
 // const key= process.env.API_KEY;
 const key= "AIzaSyBW0oSav4dxS16hVjK_VWsL1jJRDjzmpoI";
+const abc=[];
 
 module.exports.searchParameter= async(req, res) =>{
     const query= req.query.q;
@@ -16,10 +17,11 @@ module.exports.searchParameter= async(req, res) =>{
 
     const result= await searchDatabase(query);
     console.log(result);
-
+    
     if(result[0].length == 0){
+       
         await fetchFromYoutube(query);
-        const abc= await searchDatabase(query);
+        //const abc= await searchDatabase(query);
         res.status(200).json({ result: abc});
     }
     else{
@@ -62,7 +64,7 @@ await axios.get(url).then(response => {
     }).catch(error => {
         console.log(error);
 });
-
+abc= Array.from(videoList);
 await videoList.forEach(element => {
     element.save();
 });
